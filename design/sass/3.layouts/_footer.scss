@@ -1,0 +1,35 @@
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  70% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+footer
+{
+  order: 3;
+  z-index: 1;
+  background-color: $backgroundColorFooter;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  position: sticky;
+  bottom: 0px;
+  h3
+  {
+    &:hover
+    {
+      animation: wiggle 0.7s;
+    }
+    a
+    {
+      text-decoration: none;
+      color:$textColorHeaderFooter;
+      margin: 0 1em;
+    }
+  }
+}

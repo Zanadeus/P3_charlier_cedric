@@ -1,0 +1,14 @@
+.deliceDesPapilles
+{
+  background-color: $backgroundColorDeliceDesPapilles;
+  font-family: "Segoe print", sans-serif;
+  color: black;
+  h2
+  {
+    font-family: Arial, "Segoe print", sans-serif;
+    background: linear-gradient(170deg, blue 20% ,rgba(8, 135, 251, 1) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

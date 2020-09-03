@@ -1,0 +1,15 @@
+
+.paletteDuGout
+{
+  background-color: $backgroundColorPaletteDuGout;
+  font-family: "Segoe print", sans-serif;
+  color: black;
+  h2
+  {
+    font-family: 'yellowtailregular', Georgia, "Segoe print", sans-serif;
+    background: linear-gradient(170deg, green 20%, rgba(114,191,86,0.8) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

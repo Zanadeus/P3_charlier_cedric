@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Georgia, Arial, sans-serif;
+  overflow: auto;
+  max-width: 1080px;
+  margin: auto;
+}
+
+@font-face {
+  font-family: "journalregular";
+  src: url("/design/webfonts/journal_regular_macroman/journal-webfont.eot") format("eot");
+  src: url("/design/webfonts/journal_regular_macroman/journal-webfont.eot?#iefix") format("embedded-opentype"), url("/design/webfonts/journal_regular_macroman/journal-webfont.woff2") format("woff2"), url("/design/webfonts/journal_regular_macroman/journal-webfont.woff") format("woff"), url("/design/webfonts/journal_regular_macroman/journal-webfont.ttf") format("truetype"), url("/design/webfonts/journal_regular_macroman/journal-webfont.svg#journalregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  order: 1;
+  background-color: #579c87;
+  height: 100px;
+  color: #fdcb46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 3em;
+}
+header h1 > a {
+  text-decoration: none;
+  color: #fdcb46;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  70% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+footer {
+  order: 3;
+  z-index: 1;
+  background-color: #579c87;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  position: sticky;
+  bottom: 0px;
+}
+footer h3:hover {
+  animation: wiggle 0.7s;
+}
+footer h3 a {
+  text-decoration: none;
+  color: #fdcb46;
+  margin: 0 1em;
+}
+
+.container {
+  order: 2;
+}
+.container p {
+  font-size: 2em;
+}
+
+.menuCarte {
+  border: solid 10px none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #cfd8dc;
+  margin: 3em;
+  padding: 5em 0;
+}
+.menuCarte section {
+  display: flex;
+  flex-direction: column;
+}
+.menuCarte article {
+  padding: 0 3em;
+}
+.menuCarte h2 {
+  font-size: 2em;
+}
+.menuCarte h3 {
+  font-size: 1.5em;
+  padding-top: 3em;
+}
+.menuCarte p {
+  font-size: 1.2em;
+  line-height: 2.5em;
+  text-align: left;
+}
+
+.menu {
+  padding: 0 3em;
+  display: flex;
+  flex-direction: column;
+}
+.menu div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuDecoration {
+  display: flex;
+  justify-content: space-between;
+}
+.menuDecoration img {
+  width: 33%;
+  position: relative;
+  top: 2.4em;
+  object-fit: contain;
+}
+.menuDecoration h3 {
+  position: relative;
+}
+.menuDecoration h3 span {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  border-bottom: solid 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.menuDecoration h3:hover span {
+  transform: scaleX(1);
+  transition: 0.7s;
+}
+
+/* _______________________________Page d'accueil___________________________________ */
+#paletteMenusAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#paletteMenusAccueil .deliceDesPapilles p {
+  color: #0887fb;
+}
+#paletteMenusAccueil .chicALaFrancaise p {
+  color: #c67412;
+}
+#paletteMenusAccueil .paletteDuGout {
+  color: #72bf56;
+}
+
+.tuileAccueil {
+  height: 500px;
+  width: 300px;
+  border: solid 10px none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #cfd8dc;
+  margin: 2em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tuileAccueil h2 {
+  margin: 0em auto 1em;
+}
+
+.fadeEffect:hover {
+  opacity: 0.4;
+  transition: 0.7s;
+}
+.fadeEffect:hover div {
+  transform: scale(1.2);
+  transition-duration: 0.7s;
+}
+
+/* _______________________________Animation points de suspension___________________________________ */
+@keyframes typing {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#soon h2 > span {
+  background-color: #579c87;
+  color: #fdcb46;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+}
+#soon div {
+  display: flex;
+  justify-content: center;
+  padding: 2.5em 0 2em;
+}
+#soon div .fa-circle {
+  padding: 0 1em;
+  color: #579c87;
+  animation: typing 1.3s infinite;
+  transform-origin: center;
+}
+#soon div .fa-circle--1 {
+  animation-delay: 200ms;
+}
+#soon div .fa-circle--2 {
+  animation-delay: 400ms;
+}
+#soon div .fa-circle--3 {
+  animation-delay: 600ms;
+}
+
+@media screen and (max-width: 1080px) {
+  .menuDecoration img {
+    top: 2em;
+  }
+
+  .menuCarte {
+    margin: auto;
+  }
+  .menuCarte h2 {
+    font-size: 1.5em;
+  }
+  .menuCarte h3 {
+    font-size: 1.2em;
+  }
+  .menuCarte p {
+    font-size: 1em;
+  }
+  .menuCarte article {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  #paletteMenusAccueil {
+    flex-direction: column;
+  }
+
+  .tuileAccueil {
+    margin: 2em auto;
+  }
+
+  .menuCarte h2 {
+    font-size: 1.3em;
+  }
+  .menuCarte h3 {
+    font-size: 1em;
+  }
+  .menuCarte p {
+    font-size: 0.8em;
+  }
+
+  .menuDecoration img {
+    top: 1.6em;
+  }
+
+  .menu {
+    padding: 1em 0;
+  }
+  .menu p {
+    padding: 0 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    justify-content: space-around;
+  }
+  footer h3 a {
+    margin: 0em;
+  }
+
+  .menuCarte h2 {
+    font-size: 1em;
+  }
+  .menuCarte h3 {
+    font-size: 0.8em;
+  }
+  .menuCarte p {
+    font-size: 0.6em;
+  }
+
+  .menuDecoration img {
+    top: 1.3em;
+  }
+}
+.noteEnchantee {
+  background-color: #fcdfdb;
+  font-family: "Segoe print", sans-serif;
+  color: #3d1319;
+}
+.noteEnchantee i {
+  font-size: 4em;
+  background: linear-gradient(135deg, red 30%, orange 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.noteEnchantee h2 {
+  font-family: "journalregular", "Segoe print", sans-serif;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.chicALaFrancaise {
+  background-color: #fff5fe;
+  font-family: "Times New ROman", sans-serif;
+}
+.chicALaFrancaise h2 {
+  background: linear-gradient(175deg, #c67412 40%, #6e4ccc 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#chicALaFrancaise--color1 {
+  color: #c67412;
+}
+
+#chicALaFrancaise--color2 {
+  color: #a56799;
+}
+
+#chicALaFrancaise--color3 {
+  color: #6e4ccc;
+}
+
+.deliceDesPapilles {
+  background-color: #edefef;
+  font-family: "Segoe print", sans-serif;
+  color: black;
+}
+.deliceDesPapilles h2 {
+  font-family: Arial, "Segoe print", sans-serif;
+  background: linear-gradient(170deg, blue 20%, #0887fb 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.paletteDuGout {
+  background-color: #fdfffd;
+  font-family: "Segoe print", sans-serif;
+  color: black;
+}
+.paletteDuGout h2 {
+  font-family: "yellowtailregular", Georgia, "Segoe print", sans-serif;
+  background: linear-gradient(170deg, green 20%, rgba(114, 191, 86, 0.8) 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#mentionsLegales {
+  order: 2;
+}
+#mentionsLegales h2, #mentionsLegales h3, #mentionsLegales h4, #mentionsLegales h5 {
+  color: #e84f13;
+}
+#mentionsLegales h2 {
+  font-size: 2.3em;
+  padding: 2em;
+}
+#mentionsLegales h3 {
+  font-size: 2em;
+  text-align: center;
+  padding: 1em;
+}
+#mentionsLegales h4 {
+  font-size: 1.5em;
+  text-align: center;
+}
+#mentionsLegales h5 {
+  font-size: 1.2em;
+}
+#mentionsLegales section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  max-width: 1280px;
+  margin: auto;
+}
+#mentionsLegales article {
+  padding: 3% 0;
+  border-top: solid 2px #E0E0E0;
+  width: 100%;
+}
+#mentionsLegales p {
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+
+/*# sourceMappingURL=style.css.map */

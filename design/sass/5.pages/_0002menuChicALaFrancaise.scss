@@ -1,0 +1,25 @@
+.chicALaFrancaise
+{
+  background-color: $backgroundColorChicALaFrancaise;
+  font-family: "Times New ROman", sans-serif;
+  h2
+  {
+    background: linear-gradient(175deg, rgba(198, 116, 18, 1) 40%, rgba(110, 76, 204, 1) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+#chicALaFrancaise--color1
+{
+    color: rgba(198, 116, 18, 1);
+}
+#chicALaFrancaise--color2
+{
+    color: rgba(165, 103, 153, 1);
+}
+#chicALaFrancaise--color3
+{
+    color: rgba(110, 76, 204, 1);
+}

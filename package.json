@@ -1,0 +1,19 @@
+{
+  "name": "p3_charlier_cedric",
+  "version": "1.0.0",
+  "description": "Projet 3 Openclassrooms de Cedric Charlier",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./design/sass/main.scss:./design/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zanadeus/P3-charlier_cedric.git"
+  },
+  "author": "Charlier Cedric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zanadeus/P3-charlier_cedric/issues"
+  },
+  "homepage": "https://github.com/Zanadeus/P3-charlier_cedric#readme"
+}

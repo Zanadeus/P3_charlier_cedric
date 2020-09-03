@@ -1,0 +1,137 @@
+/* _______________________________Page d'accueil___________________________________ */
+
+#paletteMenusAccueil
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .deliceDesPapilles p
+  {
+    color: rgba(8, 135, 251, 1);
+  }
+  .chicALaFrancaise p
+  {
+    color: rgba(198, 116, 18, 1);
+  }
+  .paletteDuGout
+  {
+    color: rgba(114,191,86,1);
+  }
+}
+.tuileAccueil
+{
+  height: 500px;
+  width: 300px;
+  border: solid 10px none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(207,216,220,1);
+  margin: 2em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2
+  {
+    margin: 0em auto 1em;
+  }
+}
+.fadeEffect:hover
+{
+  opacity: 0.4;
+  transition: 0.7s;
+  div
+  {
+    transform: scale(1.2);
+    transition-duration: 0.7s;
+  }
+}
+
+
+/* _______________________________Animation points de suspension___________________________________ */
+
+@keyframes typing {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+#soon
+{
+  h2 > span
+  {
+    background-color: $backgroundColorFooter;
+    color: $textColorHeaderFooter;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+  }
+  div
+  {
+    display: flex;
+    justify-content: center;
+    padding: 2.5em 0 2em;
+    .fa-circle
+    {
+      padding: 0 1em;
+      color: $backgroundColorFooter;
+      animation: typing 1.3s infinite;
+      transform-origin: center;
+      @for $i from 1 through 3
+      {
+        &--#{$i} 
+        {
+          animation-delay: 200ms * $i;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px)
+{
+  .menuDecoration img {top: 2em;}
+  .menuCarte
+  {
+    margin: auto;
+    h2{font-size: 1.5em;}
+    h3{font-size: 1.2em;}
+    p{font-size: 1em;}
+    article{padding: 0;}
+  }
+}
+@media screen and (max-width: 740px)
+{
+  #paletteMenusAccueil
+  {
+    flex-direction: column;
+  }
+  .tuileAccueil
+  {
+    margin: 2em auto;
+  }
+  .menuCarte
+  {
+    h2{font-size: 1.3em;}
+    h3{font-size: 1em;}
+    p{font-size: 0.8em;}
+  }
+  .menuDecoration img {top: 1.6em;}
+  .menu
+  {
+    padding: 1em 0;
+    p{padding: 0 1em;}
+  }
+}
+@media screen and (max-width: 480px)
+{
+  footer
+  {
+    justify-content: space-around;
+    h3 a{margin: 0em;}
+  }
+  .menuCarte
+  {
+    h2{font-size: 1em;}
+    h3{font-size: 0.8em;}
+    p{font-size: 0.6em;}
+  }
+  .menuDecoration img {top: 1.3em;}
+}

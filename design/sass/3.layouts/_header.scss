@@ -1,0 +1,19 @@
+header
+{
+  order: 1;
+  background-color: $backgroundColorHeader;
+  height: 100px;
+  color: $textColorHeaderFooter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1
+  {
+    font-size: 3em;
+    > a
+    {
+      text-decoration: none;
+      color: $textColorHeaderFooter;
+    }
+  }
+}
