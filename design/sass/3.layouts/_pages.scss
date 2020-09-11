@@ -1,3 +1,5 @@
+/* ___________________________Mise en page générale du site____________________________ */
+
 .container
 {
   order: 2;
@@ -82,3 +84,54 @@
   }
 }
 
+/*__________________________________Responsive____________________________________*/
+@media screen and (max-width: 1080px)
+{
+  .menuDecoration img {top: 2em;}
+  .menuCarte
+  {
+    margin: auto;
+    h2{font-size: 1.5em;}
+    h3{font-size: 1.2em;}
+    p{font-size: 1em;}
+    article{padding: 0;}
+  }
+}
+@media screen and (max-width: 740px)
+{
+  #paletteMenusAccueil
+  {
+    flex-direction: column;
+  }
+  .tuileAccueil
+  {
+    margin: 2em auto;
+  }
+  .menuCarte
+  {
+    h2{font-size: 1.3em;}
+    h3{font-size: 1em;}
+    p{font-size: 0.8em;}
+  }
+  .menuDecoration img {top: 1.6em;}
+  .menu
+  {
+    padding: 1em 0;
+    p{padding: 0 1em;}
+  }
+}
+@media screen and (max-width: 480px)
+{
+  footer
+  {
+    justify-content: space-around;
+    h3 a{margin: 0em;}
+  }
+  .menuCarte
+  {
+    h2{font-size: 1em;}
+    h3{font-size: 0.8em;}
+    p{font-size: 0.7em;}
+  }
+  .menuDecoration img {top: 1.3em;}
+}

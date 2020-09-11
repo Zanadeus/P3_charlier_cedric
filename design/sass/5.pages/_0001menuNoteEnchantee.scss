@@ -1,3 +1,4 @@
+/* ___________________________Mise en page restaurant Note Enchantée____________________________ */
 .noteEnchantee
 {
   background-color: $backgroundColorNoteEnchantee;
@@ -12,10 +13,4 @@
     color: transparent;
   }
   h2{font-family: "journalregular", "Segoe print", sans-serif;}
-}
-.test
-{
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
 }

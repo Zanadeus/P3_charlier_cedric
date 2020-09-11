@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   word-wrap: break-word;
@@ -22,6 +23,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+/* ___________________________Header____________________________ */
 header {
   order: 1;
   background-color: #579c87;
@@ -39,6 +41,8 @@ header h1 > a {
   color: #fdcb46;
 }
 
+/*____________________________footer_______________________________________*/
+/* Effet wiggle/secoué */
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -78,6 +82,7 @@ footer h3 a {
   margin: 0 1em;
 }
 
+/* ___________________________Mise en page générale du site____________________________ */
 .container {
   order: 2;
 }
@@ -148,83 +153,7 @@ footer h3 a {
   transition: 0.7s;
 }
 
-/* _______________________________Page d'accueil___________________________________ */
-#paletteMenusAccueil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-#paletteMenusAccueil .deliceDesPapilles p {
-  color: #0887fb;
-}
-#paletteMenusAccueil .chicALaFrancaise p {
-  color: #c67412;
-}
-#paletteMenusAccueil .paletteDuGout {
-  color: #72bf56;
-}
-
-.tuileAccueil {
-  height: 500px;
-  width: 300px;
-  border: solid 10px none;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px #cfd8dc;
-  margin: 2em;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.tuileAccueil h2 {
-  margin: 0em auto 1em;
-}
-
-.fadeEffect:hover {
-  opacity: 0.4;
-  transition: 0.7s;
-}
-.fadeEffect:hover div {
-  transform: scale(1.2);
-  transition-duration: 0.7s;
-}
-
-/* _______________________________Animation points de suspension___________________________________ */
-@keyframes typing {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-#soon h2 > span {
-  background-color: #579c87;
-  color: #fdcb46;
-  border-radius: 10px;
-  padding: 0.5em 1em;
-}
-#soon div {
-  display: flex;
-  justify-content: center;
-  padding: 2.5em 0 2em;
-}
-#soon div .fa-circle {
-  padding: 0 1em;
-  color: #579c87;
-  animation: typing 1.3s infinite;
-  transform-origin: center;
-}
-#soon div .fa-circle--1 {
-  animation-delay: 200ms;
-}
-#soon div .fa-circle--2 {
-  animation-delay: 400ms;
-}
-#soon div .fa-circle--3 {
-  animation-delay: 600ms;
-}
-
+/*__________________________________Responsive____________________________________*/
 @media screen and (max-width: 1080px) {
   .menuDecoration img {
     top: 2em;
@@ -291,13 +220,92 @@ footer h3 a {
     font-size: 0.8em;
   }
   .menuCarte p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   .menuDecoration img {
     top: 1.3em;
   }
 }
+/* _______________________________Page d'accueil___________________________________ */
+#paletteMenusAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#paletteMenusAccueil .deliceDesPapilles p {
+  color: #0887fb;
+}
+#paletteMenusAccueil .chicALaFrancaise p {
+  color: #c67412;
+}
+#paletteMenusAccueil .paletteDuGout {
+  color: #72bf56;
+}
+
+.tuileAccueil {
+  height: 500px;
+  width: 300px;
+  border: solid 10px none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #cfd8dc;
+  margin: 2em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tuileAccueil h2 {
+  margin: 0em auto 1em;
+}
+
+/* Effet fondu au survol des tuiles */
+.fadeEffect:hover {
+  opacity: 0.4;
+  transition: 0.7s;
+}
+.fadeEffect:hover div {
+  transform: scale(1.2);
+  transition-duration: 0.7s;
+}
+
+/* _______________________________Animation points de suspension___________________________________ */
+@keyframes typing {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#soon h2 > span {
+  background-color: #579c87;
+  color: #fdcb46;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+}
+#soon div {
+  display: flex;
+  justify-content: center;
+  padding: 2.5em 0 2em;
+}
+#soon div .fa-circle {
+  padding: 0 1em;
+  color: #579c87;
+  animation: typing 1.3s infinite;
+  transform-origin: center;
+}
+#soon div .fa-circle--1 {
+  animation-delay: 200ms;
+}
+#soon div .fa-circle--2 {
+  animation-delay: 400ms;
+}
+#soon div .fa-circle--3 {
+  animation-delay: 600ms;
+}
+
+/* ___________________________Mise en page restaurant Note Enchantée____________________________ */
 .noteEnchantee {
   background-color: #fcdfdb;
   font-family: "Segoe print", sans-serif;
@@ -314,12 +322,7 @@ footer h3 a {
   font-family: "journalregular", "Segoe print", sans-serif;
 }
 
-.test {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-
+/* ___________________________Mise en page restaurant Le Chic à la française____________________________ */
 .chicALaFrancaise {
   background-color: #fff5fe;
   font-family: "Times New ROman", sans-serif;
@@ -331,6 +334,7 @@ footer h3 a {
   color: transparent;
 }
 
+/* ___________________________Mise en page restaurant Note Enchantée____________________________ */
 #chicALaFrancaise--color1 {
   color: #c67412;
 }
