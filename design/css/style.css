@@ -8,7 +8,12 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-family: "Times New Roman", Georgia, Arial, sans-serif;
   overflow: auto;
@@ -25,12 +30,20 @@ body {
 }
 /* ___________________________Header____________________________ */
 header {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
   order: 1;
   background-color: #579c87;
   height: 100px;
   color: #fdcb46;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 header h1 {
@@ -61,19 +74,30 @@ header h1 > a {
   }
 }
 footer {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
   order: 3;
   z-index: 1;
   background-color: #579c87;
   height: 50px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-item-align: end;
   align-self: flex-end;
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0px;
 }
 footer h3:hover {
+  -webkit-animation: wiggle 0.7s;
   animation: wiggle 0.7s;
 }
 footer h3 a {
@@ -84,6 +108,8 @@ footer h3 a {
 
 /* ___________________________Mise en page générale du site____________________________ */
 .container {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
 }
 .container p {
@@ -98,7 +124,12 @@ footer h3 a {
   padding: 5em 0;
 }
 .menuCarte section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .menuCarte article {
@@ -119,22 +150,36 @@ footer h3 a {
 
 .menu {
   padding: 0 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .menuDecoration {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .menuDecoration img {
   width: 33%;
   position: relative;
   top: 2.4em;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 .menuDecoration h3 {
@@ -145,11 +190,15 @@ footer h3 a {
   height: 40px;
   width: 100%;
   border-bottom: solid 5px;
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transform-origin: left;
   transform-origin: left;
 }
 .menuDecoration h3:hover span {
+  -webkit-transform: scaleX(1);
   transform: scaleX(1);
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -177,6 +226,9 @@ footer h3 a {
 }
 @media screen and (max-width: 740px) {
   #paletteMenusAccueil {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -211,16 +263,6 @@ footer h3 a {
   }
   footer h3 a {
     margin: 0em;
-  }
-
-  .menuCarte h2 {
-    font-size: 1em;
-  }
-  .menuCarte h3 {
-    font-size: 0.8em;
-  }
-  .menuCarte p {
-    font-size: 0.7em;
   }
 
   .menuDecoration img {
@@ -334,7 +376,7 @@ footer h3 a {
   color: transparent;
 }
 
-/* ___________________________Mise en page restaurant Note Enchantée____________________________ */
+/* ___________________________Mise en page restaurant coulaurs menu Chic à la française____________________________ */
 #chicALaFrancaise--color1 {
   color: #c67412;
 }

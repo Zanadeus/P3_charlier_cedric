@@ -12,21 +12,32 @@
 
 footer
 {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   z-index: 1;
   background-color: $backgroundColorFooter;
   height: 50px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-self: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0px;
   h3
   {
     &:hover
     {
+      -webkit-animation: wiggle 0.7s;
       animation: wiggle 0.7s;
     }
     a
