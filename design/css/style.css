@@ -211,15 +211,6 @@ footer h3 a {
   .menuCarte {
     margin: auto;
   }
-  .menuCarte h2 {
-    font-size: 1.5em;
-  }
-  .menuCarte h3 {
-    font-size: 1.2em;
-  }
-  .menuCarte p {
-    font-size: 1em;
-  }
   .menuCarte article {
     padding: 0;
   }
@@ -236,16 +227,6 @@ footer h3 a {
     margin: 2em auto;
   }
 
-  .menuCarte h2 {
-    font-size: 1.3em;
-  }
-  .menuCarte h3 {
-    font-size: 1em;
-  }
-  .menuCarte p {
-    font-size: 0.8em;
-  }
-
   .menuDecoration img {
     top: 1.6em;
   }
@@ -259,6 +240,7 @@ footer h3 a {
 }
 @media screen and (max-width: 480px) {
   footer {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   footer h3 a {
@@ -271,8 +253,12 @@ footer h3 a {
 }
 /* _______________________________Page d'accueil___________________________________ */
 #paletteMenusAccueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 #paletteMenusAccueil .deliceDesPapilles p {
@@ -293,8 +279,14 @@ footer h3 a {
   box-shadow: 0px 0px 20px #cfd8dc;
   margin: 2em;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .tuileAccueil h2 {
@@ -304,19 +296,34 @@ footer h3 a {
 /* Effet fondu au survol des tuiles */
 .fadeEffect:hover {
   opacity: 0.4;
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 .fadeEffect:hover div {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  -webkit-transition-duration: 0.7s;
   transition-duration: 0.7s;
 }
 
 /* _______________________________Animation points de suspension___________________________________ */
-@keyframes typing {
+@-webkit-keyframes typing {
   0% {
+    -webkit-transform: scale(0);
     transform: scale(0);
   }
   100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes typing {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -327,23 +334,32 @@ footer h3 a {
   padding: 0.5em 1em;
 }
 #soon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 2.5em 0 2em;
 }
 #soon div .fa-circle {
   padding: 0 1em;
   color: #579c87;
+  -webkit-animation: typing 1.3s infinite;
   animation: typing 1.3s infinite;
+  -webkit-transform-origin: center;
   transform-origin: center;
 }
 #soon div .fa-circle--1 {
+  -webkit-animation-delay: 200ms;
   animation-delay: 200ms;
 }
 #soon div .fa-circle--2 {
+  -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
 }
 #soon div .fa-circle--3 {
+  -webkit-animation-delay: 600ms;
   animation-delay: 600ms;
 }
 
@@ -355,6 +371,7 @@ footer h3 a {
 }
 .noteEnchantee i {
   font-size: 4em;
+  background: -webkit-linear-gradient(315deg, red 30%, orange 80%);
   background: linear-gradient(135deg, red 30%, orange 80%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -370,6 +387,7 @@ footer h3 a {
   font-family: "Times New ROman", sans-serif;
 }
 .chicALaFrancaise h2 {
+  background: -webkit-linear-gradient(275deg, #c67412 40%, #6e4ccc 80%);
   background: linear-gradient(175deg, #c67412 40%, #6e4ccc 80%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -396,6 +414,7 @@ footer h3 a {
 }
 .deliceDesPapilles h2 {
   font-family: Arial, "Segoe print", sans-serif;
+  background: -webkit-linear-gradient(280deg, blue 20%, #0887fb 60%);
   background: linear-gradient(170deg, blue 20%, #0887fb 60%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -409,6 +428,7 @@ footer h3 a {
 }
 .paletteDuGout h2 {
   font-family: "yellowtailregular", Georgia, "Segoe print", sans-serif;
+  background: -webkit-linear-gradient(280deg, green 20%, rgba(114, 191, 86, 0.8) 60%);
   background: linear-gradient(170deg, green 20%, rgba(114, 191, 86, 0.8) 60%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -416,6 +436,8 @@ footer h3 a {
 }
 
 #mentionsLegales {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
 }
 #mentionsLegales h2, #mentionsLegales h3, #mentionsLegales h4, #mentionsLegales h5 {
@@ -438,8 +460,15 @@ footer h3 a {
   font-size: 1.2em;
 }
 #mentionsLegales section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-family: Arial, sans-serif;
   max-width: 1280px;
