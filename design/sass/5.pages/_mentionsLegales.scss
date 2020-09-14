@@ -1,8 +1,18 @@
 #mentionsLegales
 {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;  
-          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Arial, sans-serif;
+  max-width: 1280px;
+  margin: auto;
   h2,h3,h4,h5{color: rgba(232,79,19,1);}
   h2
   {
@@ -24,27 +34,13 @@
   {
     font-size: 1.2em;
   }
-  section
-  {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: Arial, sans-serif;
-    max-width: 1280px;
-    margin: auto;
-  }
+  p{padding: 0.5em; /*font-size: 1.1em;*/ }
+
   article
   {
       padding: 3% 0;
       border-top: solid 2px #E0E0E0;
       width: 100%;
   }
-  p{padding: 0.5em; font-size: 1.1em;}
+
 }

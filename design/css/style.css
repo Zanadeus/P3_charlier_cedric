@@ -111,9 +111,16 @@ footer h3 a {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
+  margin: auto;
+}
+.container h2 {
+  font-size: 1.6em;
+}
+.container h3 {
+  font-size: 1.4em;
 }
 .container p {
-  font-size: 2em;
+  font-size: 1.2em;
 }
 
 .menuCarte {
@@ -135,15 +142,10 @@ footer h3 a {
 .menuCarte article {
   padding: 0 3em;
 }
-.menuCarte h2 {
-  font-size: 2em;
-}
 .menuCarte h3 {
-  font-size: 1.5em;
   padding-top: 3em;
 }
 .menuCarte p {
-  font-size: 1.2em;
   line-height: 2.5em;
   text-align: left;
 }
@@ -248,7 +250,7 @@ footer h3 a {
   }
 
   .menuDecoration img {
-    top: 1.3em;
+    top: 2.4em;
   }
 }
 /* _______________________________Page d'accueil___________________________________ */
@@ -293,7 +295,7 @@ footer h3 a {
   margin: 0em auto 1em;
 }
 
-/* Effet fondu au survol des tuiles */
+/* _______________________________Effet fondu au survol des tuiles_______________________________ */
 .fadeEffect:hover {
   opacity: 0.4;
   -webkit-transition: 0.7s;
@@ -306,7 +308,7 @@ footer h3 a {
   transition-duration: 0.7s;
 }
 
-/* _______________________________Animation points de suspension___________________________________ */
+/* _______________________________Animation points de suspension_______________________________*/
 @-webkit-keyframes typing {
   0% {
     -webkit-transform: scale(0);
@@ -379,6 +381,7 @@ footer h3 a {
 }
 .noteEnchantee h2 {
   font-family: "journalregular", "Segoe print", sans-serif;
+  font-size: 3em;
 }
 
 /* ___________________________Mise en page restaurant Le Chic à la française____________________________ */
@@ -428,6 +431,7 @@ footer h3 a {
 }
 .paletteDuGout h2 {
   font-family: "yellowtailregular", Georgia, "Segoe print", sans-serif;
+  font-size: 2em;
   background: -webkit-linear-gradient(280deg, green 20%, rgba(114, 191, 86, 0.8) 60%);
   background: linear-gradient(170deg, green 20%, rgba(114, 191, 86, 0.8) 60%);
   -webkit-background-clip: text;
@@ -436,9 +440,19 @@ footer h3 a {
 }
 
 #mentionsLegales {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  max-width: 1280px;
+  margin: auto;
 }
 #mentionsLegales h2, #mentionsLegales h3, #mentionsLegales h4, #mentionsLegales h5 {
   color: #e84f13;
@@ -459,29 +473,14 @@ footer h3 a {
 #mentionsLegales h5 {
   font-size: 1.2em;
 }
-#mentionsLegales section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  max-width: 1280px;
-  margin: auto;
+#mentionsLegales p {
+  padding: 0.5em;
+  /*font-size: 1.1em;*/
 }
 #mentionsLegales article {
   padding: 3% 0;
   border-top: solid 2px #E0E0E0;
   width: 100%;
-}
-#mentionsLegales p {
-  padding: 0.5em;
-  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=style.css.map */

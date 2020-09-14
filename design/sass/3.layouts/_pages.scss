@@ -5,9 +5,18 @@
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  margin: auto;
+  h2
+  {
+    font-size: 1.6em;
+  }
+  h3
+  {
+    font-size: 1.4em;
+  }
   p
   {
-    font-size: 2em;
+    font-size: 1.2em;
   }
 }
 
@@ -32,18 +41,12 @@
   {
     padding: 0 3em;
   }
-  h2
-  {
-    font-size: 2em;
-  }
   h3
   {
-    font-size: 1.5em;
     padding-top: 3em;
   }
   p
   {
-    font-size: 1.2em;
     line-height: 2.5em;
     text-align: left;
   }
@@ -147,5 +150,5 @@
         justify-content: space-around;
     h3 a{margin: 0em;}
   }
-  .menuDecoration img {top: 1.3em;}
+  .menuDecoration img {top: 2.4em;}
 }
