@@ -116,6 +116,9 @@ footer h3 a {
 .container h2 {
   font-size: 1.6em;
 }
+.container > h2 {
+  padding-top: 1em;
+}
 .container h3 {
   font-size: 1.4em;
 }
