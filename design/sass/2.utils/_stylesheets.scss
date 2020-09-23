@@ -1,11 +1,14 @@
+
 @font-face {
-    font-family: 'journalregular';
-    src: url('/design/webfonts/journal_regular_macroman/journal-webfont.eot') format('eot');
-    src: url('/design/webfonts/journal_regular_macroman/journal-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/design/webfonts/journal_regular_macroman/journal-webfont.woff2') format('woff2'),
-         url('/design/webfonts/journal_regular_macroman/journal-webfont.woff') format('woff'),
-         url('/design/webfonts/journal_regular_macroman/journal-webfont.ttf') format('truetype'),
-         url('/design/webfonts/journal_regular_macroman/journal-webfont.svg#journalregular') format('svg');
+	font-family: "Segoe Print";
+    src: url('/design/webfonts/segoepr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "Segoe Script";
+    src: url('/design/webfonts/segoesc.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

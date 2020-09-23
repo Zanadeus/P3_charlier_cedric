@@ -76,14 +76,17 @@
 
 #soon
 {
-  h2 > span
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  h2
   {
     background-color: $backgroundColorFooter;
     color: $textColorHeaderFooter;
     border-radius: 10px;
-    padding: 0.5em 1em;
+    padding: 0.5em;
   }
-  div
+  #dotdotdot
   {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -95,7 +98,7 @@
     .fa-circle
     {
       padding: 0 1em;
-      color: $backgroundColorFooter;
+      color: $textColorHeaderFooter;
       -webkit-animation: typing 1.3s infinite;
               animation: typing 1.3s infinite;
       -webkit-transform-origin: center;
